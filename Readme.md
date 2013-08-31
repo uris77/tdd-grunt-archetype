@@ -10,7 +10,7 @@ will be saved under __dist/__. You can change this in __Gruntfilie.js__ to suit 
 ## Usage
 Clone the project:
 ```
-git clone https://github.com/uris77/tdd-grunt-archetype my-project-name
+git clone git@github.com:uris77/tdd-grunt-archetype.git my-project-name
 ```
 Run the tests:
 ```
