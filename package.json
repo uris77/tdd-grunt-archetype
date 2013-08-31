@@ -1,12 +1,22 @@
 {
-  "name": "backpicker",
+  "name": "tdd-grunt-archetype",
   "version": "0.0.1",
-  "description": "A Marionettejs Component for Uploading Images with InkFilepicker.",
-  "homepage": "https://github.com/uris77/backpicker.git",
+  "description": "A simple archetype that uses grunt to setup testem & jasmine to test drive a simple javascript utility.",
+  "homepage": "https://github.com/uris77/tdd-grunt-archetype.git",
   "author": {
     "name": "Roberto Guerra",
     "company": "Spantree LLC"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/urits77/tdd-grunt-archetype.git"
+  },
+ "licenses": [
+    {
+        "type": "GPLv3",
+        "url": "http://www.gnu.org/licenses/gpl-3.0.html"
+    }
+ ],
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-jasmine": "~0.5.1",
