@@ -68,6 +68,6 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('coffee:compiledJoined','Compiles the Coffeescript source files', ['coffee:compileJoined']);
-    grunt.registerTask('buildDist', "Build Project", ['coffee:compileJoined', 'concat', 'uglify'])
+    grunt.registerTask('build', "Build Project", ['coffee:compileJoined', 'concat', 'uglify'])
 
 }
