@@ -1,0 +1,20 @@
+{
+  "name": "backpicker",
+  "version": "0.0.1",
+  "description": "A Marionettejs Component for Uploading Images with InkFilepicker.",
+  "homepage": "https://github.com/uris77/backpicker.git",
+  "author": {
+    "name": "Roberto Guerra",
+    "company": "Spantree LLC"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jasmine": "~0.5.1",
+    "grunt-contrib-testem": "~0.4.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-handlebars": "~0.5.10",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-watch-nospawn": "0.0.3"
+  }
+}
