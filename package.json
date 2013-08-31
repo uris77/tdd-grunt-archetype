@@ -11,12 +11,12 @@
     "type": "git",
     "url": "git://github.com/urits77/tdd-grunt-archetype.git"
   },
- "licenses": [
+  "licenses": [
     {
-        "type": "GPLv3",
-        "url": "http://www.gnu.org/licenses/gpl-3.0.html"
+      "type": "GPLv3",
+      "url": "http://www.gnu.org/licenses/gpl-3.0.html"
     }
- ],
+  ],
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-jasmine": "~0.5.1",
@@ -25,6 +25,7 @@
     "grunt-contrib-coffee": "~0.7.0",
     "grunt-contrib-handlebars": "~0.5.10",
     "grunt-contrib-concat": "~0.3.0",
-    "grunt-watch-nospawn": "0.0.3"
+    "grunt-watch-nospawn": "0.0.3",
+    "grunt-contrib-uglify": "~0.2.2"
   }
 }

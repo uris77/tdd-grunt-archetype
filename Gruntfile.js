@@ -9,10 +9,16 @@ module.exports = function(grunt) {
         "grunt-contrib-coffee",
         "grunt-contrib-handlebars",
         "grunt-contrib-concat",
-        "grunt-watch-nospawn"
+        "grunt-watch-nospawn",
+        "grunt-contrib-uglify"
     ].forEach(grunt.loadNpmTasks);
 
     grunt.initConfig({
+
+        tmp: '.tmp/',
+        dist: 'dist/',
+        projectName: 'projectName',
+
         testem: {
             environment: {
                 src: [
@@ -27,7 +33,41 @@ module.exports = function(grunt) {
                     launch_in_dev: ['PhantomJS', 'Chrome']
                 }
             }
-        }
+        },
+        concat: {
+            options: {
+                separator: ';'
+            },
+            dist: {
+                src: ['<%= tmp %><%= projectName %>.js'],
+                dest: 'dist/<%= projectName %>.js'
+            }
+        },
+
+        coffee: {
+            compileJoined: {
+                options: {
+                    join: true
+                },
+                files: {
+                    '<%= tmp %><%= projectName %>.js': ["src/*.coffee"]
+                }
+            }
+        },
+        uglify: {
+            options: {
+                mangle: false
+            },
+            build: {
+                files: {
+                    'dist/<%= projectName %>.min.js': ['.tmp/<%= projectName %>.js']
+                }
+            }
+        },
+        clean: ['<%= tmp %>', '<%= dist %>']
     });
+
+    grunt.registerTask('coffee:compiledJoined','Compiles the Coffeescript source files', ['coffee:compileJoined']);
+    grunt.registerTask('buildDist', "Build Project", ['coffee:compileJoined', 'concat', 'uglify'])
 
 }
