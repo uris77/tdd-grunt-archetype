@@ -14,6 +14,26 @@ $ grunt testem:run:environment
 
 All __specs__ should be placed under the __spec__ directory and all source code should be placed under __src__ folder.
 
+## Project Directory Structure
+``` bash
+.
+├── src
+│   └── app.coffee         # <-- JS & CoffeeScript
+│
+├── spec
+│   ├── helpers             # <-- Spec helpers
+│   │   ├── jasmine-fixture.js
+│   │   ├── jasmine-given.js
+│   │   └── jasmine-stealth.js
+│   └── example_spec.coffee    # <-- Jasmine specs(JS or Coffee)
+└── vendor
+    └── js
+        ├── underscore.js   # <-- Underscore
+        └── jquery.js       # <-- Jquery
+
+```
+
+
 ## Requirements
 * Nodejs
 * npm
